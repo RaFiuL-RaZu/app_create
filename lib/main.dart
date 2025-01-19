@@ -32,7 +32,12 @@ class HomeActivity extends StatelessWidget{
 
       appBar: AppBar(
         title: Text("Inventory App"),
-        titleSpacing: 0,
+        titleSpacing: 40,
+        centerTitle: true,
+        toolbarHeight: 40,
+        toolbarOpacity: 0.9,
+        elevation: 10,
+        backgroundColor: Colors.indigoAccent,
       ),
       body: Text("I am Student of Dinajpur Polytechnic Institute"),
 
