@@ -38,6 +38,12 @@ class HomeActivity extends StatelessWidget{
         toolbarOpacity: 0.9,
         elevation: 10,
         backgroundColor: Colors.indigoAccent,
+        actions: [
+          IconButton(onPressed:(){}, icon: Icon(Icons.comment)),
+          IconButton(onPressed:(){}, icon: Icon(Icons.settings)),
+          IconButton(onPressed:(){}, icon: Icon(Icons.email)),
+          IconButton(onPressed:(){}, icon: Icon(Icons.phone)),
+        ],
       ),
       body: Text("I am Student of Dinajpur Polytechnic Institute"),
 
