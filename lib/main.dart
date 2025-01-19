@@ -33,7 +33,6 @@ class HomeActivity extends StatelessWidget{
       appBar: AppBar(
         title: Text("Inventory App"),
         titleSpacing: 0,
-        centerTitle: true,
       ),
       body: Text("I am Student of Dinajpur Polytechnic Institute"),
 
