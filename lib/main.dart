@@ -58,12 +58,24 @@ class HomeActivity extends StatelessWidget{
         onPressed: (){Mysnakbar("Action Button Is on.",context);},
       ),
       bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 1,
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "Contact"),
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "Profile"),
 
         ],
+        onTap:(int index){
+          if(index==0){
+            Mysnakbar("I am Home Menu", context);
+          }
+          if(index==1){
+            Mysnakbar("I am Contact Menu", context);
+          }
+          if(index==2){
+            Mysnakbar("I am Profile Menu", context);
+          }
+        },
       ),
 
     );
