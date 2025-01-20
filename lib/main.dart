@@ -37,6 +37,9 @@ class HomeActivity extends StatelessWidget{
         elevation: 10,
         actions: [
           IconButton(onPressed: (){}, icon: Icon(Icons.search)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.settings)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.phone)),
+          IconButton(onPressed: (){}, icon: Icon(Icons.message)),
         ],
       ),
 
