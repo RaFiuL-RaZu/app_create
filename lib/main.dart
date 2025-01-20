@@ -50,8 +50,17 @@ class HomeActivity extends StatelessWidget{
           IconButton(onPressed:(){Mysnakbar("I am Email",context);}, icon: Icon(Icons.email)),
           IconButton(onPressed:(){Mysnakbar("I am Phone",context);}, icon: Icon(Icons.phone)),
         ],
+
       ),
       body: Text("I am Student of Dinajpur Polytechnic Institute"),
+      floatingActionButton: FloatingActionButton(
+        elevation: 10,
+        child: Icon(Icons.add),
+        onPressed: (){
+          Mysnakbar("I am FloatingAction",context);
+        },
+
+      ),
 
     );
   }
