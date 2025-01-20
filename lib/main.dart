@@ -60,7 +60,7 @@ class HomeActivity extends StatelessWidget{
       bottomNavigationBar: BottomNavigationBar(
         items: [
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.home),label: "Message"),
+          BottomNavigationBarItem(icon: Icon(Icons.home),label: "Contact"),
           BottomNavigationBarItem(icon: Icon(Icons.home),label: "Profile"),
 
         ],
