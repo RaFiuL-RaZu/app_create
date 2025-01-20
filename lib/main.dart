@@ -24,6 +24,12 @@ class MyApp extends StatelessWidget{
 class HomeActivity extends StatelessWidget{
   const HomeActivity({Key? key}) : super(key: key);
 
+  Mysnakbar(message,context){
+    ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(message))
+    );
+  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -39,10 +45,10 @@ class HomeActivity extends StatelessWidget{
         elevation: 10,
         backgroundColor: Colors.indigoAccent,
         actions: [
-          IconButton(onPressed:(){}, icon: Icon(Icons.comment)),
-          IconButton(onPressed:(){}, icon: Icon(Icons.settings)),
-          IconButton(onPressed:(){}, icon: Icon(Icons.email)),
-          IconButton(onPressed:(){}, icon: Icon(Icons.phone)),
+          IconButton(onPressed:(){Mysnakbar("I am Comments",context);}, icon: Icon(Icons.comment)),
+          IconButton(onPressed:(){Mysnakbar("I am Settings",context);}, icon: Icon(Icons.settings)),
+          IconButton(onPressed:(){Mysnakbar("I am Email",context);}, icon: Icon(Icons.email)),
+          IconButton(onPressed:(){Mysnakbar("I am Phone",context);}, icon: Icon(Icons.phone)),
         ],
       ),
       body: Text("I am Student of Dinajpur Polytechnic Institute"),
