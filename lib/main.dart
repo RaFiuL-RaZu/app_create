@@ -81,7 +81,7 @@ class HomeActivity extends StatelessWidget{
             DrawerHeader(
               padding: EdgeInsets.all(0),
                 child: UserAccountsDrawerHeader(
-
+                  decoration: BoxDecoration(color: Colors.white),
                   accountName: Text("RaFiuL Islam"),
                   accountEmail: Text("rafi102621@gmail.com"),
                   currentAccountPicture: Image.network("https://cdn.iconscout.com/icon/free/png-256/free-flutter-logo-icon-download-in-svg-png-gif-file-formats--programming-language-coding-development-logos-icons-1720090.png"),
