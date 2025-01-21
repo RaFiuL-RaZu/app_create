@@ -75,10 +75,11 @@ class HomeActivity extends StatelessWidget{
 
         },
       ),
-      drawer: Drawer(
+      endDrawer: Drawer(
         child: ListView(
           children: [
             DrawerHeader(
+
               padding: EdgeInsets.all(0),
                 child: UserAccountsDrawerHeader(
                   decoration: BoxDecoration(color: Colors.white),
