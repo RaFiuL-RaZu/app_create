@@ -32,8 +32,13 @@ class HomeActivity extends StatelessWidget{
     );
   }
 
+
   @override
   Widget build(BuildContext context) {
+     ButtonStyle buttonStyle=ElevatedButton.styleFrom(
+        padding: EdgeInsets.all(25),
+
+    );
 
     return Scaffold(
       appBar: AppBar(
@@ -104,16 +109,14 @@ class HomeActivity extends StatelessWidget{
         ),
       ),
       //
-      body: Container(
-        child: Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
-        height: 260,
-        width: 400,
-        alignment: Alignment.topCenter,
-        margin: EdgeInsets.fromLTRB(40, 80, 60, 40),
-        decoration: BoxDecoration(
-            color: Colors.teal,
-        border: Border.all(color: Colors.black, width: 2)
-        ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          TextButton(onPressed: (){Mysnakbar("This is Text Button", context);}, child: Text("Text Button")),
+          ElevatedButton(onPressed: (){Mysnakbar("This is Elevated Button", context);}, child: Text("Text Button"),style: buttonStyle,),
+          OutlinedButton(onPressed: (){Mysnakbar("This is Outline Button", context);}, child: Text("Text Button")),
+
+        ],
       ),
       //
     );
