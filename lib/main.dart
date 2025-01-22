@@ -36,8 +36,12 @@ class HomeActivity extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
      ButtonStyle buttonStyle=ElevatedButton.styleFrom(
-        padding: EdgeInsets.all(25),
-
+        padding: EdgeInsets.all(20),
+        primary: Colors.indigoAccent,
+        onPrimary: Colors.amberAccent,
+        shape:RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(10)),
+        )
     );
 
     return Scaffold(
