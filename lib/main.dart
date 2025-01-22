@@ -44,8 +44,8 @@ class HomeActivity extends StatelessWidget{
         toolbarHeight: 60,
         actions: [
           IconButton(onPressed: (){Mysnakbar("Search Option",context);}, icon: Icon(Icons.search)),
-          IconButton(onPressed: (){Mysnakbar("Search Option",context);}, icon: Icon(Icons.phone)),
-          IconButton(onPressed: (){Mysnakbar("Search Option",context);}, icon: Icon(Icons.email)),
+          IconButton(onPressed: (){Mysnakbar("Phone Option",context);}, icon: Icon(Icons.phone)),
+          IconButton(onPressed: (){Mysnakbar("Message Option",context);}, icon: Icon(Icons.email)),
 
         ],
       ),
@@ -103,9 +103,10 @@ class HomeActivity extends StatelessWidget{
           ],
         ),
       ),
+      //
       body: Container(
-        child: Text("Hello RaFiuL RaZu"),
-        height: 400,
+        child: Image.network("https://t4.ftcdn.net/jpg/02/81/42/77/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg"),
+        height: 260,
         width: 400,
         alignment: Alignment.topCenter,
         margin: EdgeInsets.fromLTRB(40, 80, 60, 40),
@@ -114,6 +115,7 @@ class HomeActivity extends StatelessWidget{
         border: Border.all(color: Colors.black, width: 2)
         ),
       ),
+      //
     );
   }
 
