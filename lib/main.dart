@@ -111,7 +111,7 @@ class HomeActivity extends StatelessWidget{
         margin: EdgeInsets.fromLTRB(40, 80, 60, 40),
         decoration: BoxDecoration(
             color: Colors.teal,
-        border: Border.all(color: Colors.black, width: 2),
+        border: Border.all(color: Colors.black, width: 2)
         ),
       ),
     );
