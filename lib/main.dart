@@ -22,77 +22,32 @@ class MyApp extends StatelessWidget{
 }
 
 class HomeActivity extends StatelessWidget{
-  const HomeActivity({Key? key}) : super(key: key);
+   HomeActivity({Key? key}) : super(key: key);
 
   Mysnakbar(message,context){
     ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text(message))
     );
   }
-  MyAlertDialog(context){
-    return showDialog(
-        context: context,
-        builder: (BuildContext context){
-         return Expanded(
-             child: AlertDialog(
-               title: Text("Alert !"),
-               content: Text("Do You Want To Delete?"),
-               actions: [
-                 TextButton(onPressed: (){
-                   Mysnakbar("Delete Succesfully", context);
-                   Navigator.of(context).pop();
-                 }, child: Text("Yes")),
-                 TextButton(onPressed: (){Navigator.of(context).pop();}, child: Text("No")),
-               ],
-             )
-         );
-        }
-    );
-  }
-
+  ButtonStyle buttonStyle=ElevatedButton.styleFrom(
+    maximumSize: Size(double.infinity,100)
+  );
 
   @override
   Widget build(BuildContext context) {
 
 
     return Scaffold(
+    body: Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: 'First Name')),),
+        Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: 'Last Name')),),
+        Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: 'Email Address')),),
+        Padding(padding: EdgeInsets.all(20),child: ElevatedButton(onPressed: (){},child: Text("Submit Button"),style: buttonStyle,)),
 
-      appBar: AppBar(
-        title: Text("WhatsApp"),
-        backgroundColor: Colors.teal,
-        actions: [
-          IconButton(onPressed: (){}, icon: Icon(Icons.camera_enhance)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.search)),
-          IconButton(onPressed: (){}, icon: Icon(Icons.more_vert)),
-        ],
-
-      ),
-      body: Center(
-        child: ElevatedButton(onPressed:(){MyAlertDialog(context);}, child:Text(" Click Me")),
-      ),
-
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.teal,
-        selectedItemColor: Colors.white,
-        unselectedItemColor: Colors.white,
-        items: [
-          BottomNavigationBarItem(icon:Icon(Icons.home),label: "Chats"),
-          BottomNavigationBarItem(icon:Icon(Icons.update),label: "Updates"),
-          BottomNavigationBarItem(icon:Icon(Icons.call),label: "Calls"),
-
-        ],
-        onTap: (int index){
-          if(index==0){
-            Mysnakbar("Chating Function",context);
-          }
-          if(index==1){
-            Mysnakbar("See Updates",context);
-          }
-          if(index==2){
-            Mysnakbar("Calling me",context);
-          }
-        },
-      ),
+      ],
+    ),
 
     );
   }
