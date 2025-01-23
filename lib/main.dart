@@ -30,7 +30,7 @@ class HomeActivity extends StatelessWidget{
     );
   }
   ButtonStyle buttonStyle=ElevatedButton.styleFrom(
-    maximumSize: Size(double.infinity,100)
+    maximumSize: Size(double.infinity,60)
   );
 
   @override
