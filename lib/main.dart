@@ -38,8 +38,11 @@ class HomeActivity extends StatelessWidget{
                title: Text("Alert !"),
                content: Text("Do You Want To Delete?"),
                actions: [
-                 TextButton(onPressed: (){}, child: Text("Yes")),
-                 TextButton(onPressed: (){}, child: Text("No")),
+                 TextButton(onPressed: (){
+                   Mysnakbar("Delete Succesfully", context);
+                   Navigator.of(context).pop();
+                 }, child: Text("Yes")),
+                 TextButton(onPressed: (){Navigator.of(context).pop();}, child: Text("No")),
                ],
              )
          );
