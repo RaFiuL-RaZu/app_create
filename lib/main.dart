@@ -1,5 +1,5 @@
 
-import 'dart:html';
+
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -14,10 +14,8 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
 
     return MaterialApp(
-      theme: ThemeData(primarySwatch: Colors.indigo),
-      darkTheme: ThemeData(primarySwatch: Colors.teal),
       debugShowCheckedModeBanner: false,
-      home: HomeActivity(),
+      home:HomeActivity(),
     );
   }
 
@@ -32,98 +30,27 @@ class HomeActivity extends StatelessWidget{
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
-     ButtonStyle buttonStyle=ElevatedButton.styleFrom(
-        padding: EdgeInsets.all(20),
-        primary: Colors.indigoAccent,
-        onPrimary: Colors.amberAccent,
-        shape:RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(10)),
-        )
+    ButtonStyle buttonStyle=ElevatedButton.styleFrom(
+      padding: EdgeInsets.all(20),
+      primary: Colors.orangeAccent,
+      onPrimary: Colors.white,
+
     );
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Inovation New App"),
-        centerTitle: true,
-        elevation: 10,
-        toolbarOpacity: 0.9,
-        toolbarHeight: 60,
-        actions: [
-          IconButton(onPressed: (){Mysnakbar("Search Option",context);}, icon: Icon(Icons.search)),
-          IconButton(onPressed: (){Mysnakbar("Phone Option",context);}, icon: Icon(Icons.phone)),
-          IconButton(onPressed: (){Mysnakbar("Message Option",context);}, icon: Icon(Icons.email)),
-
-        ],
-      ),
-
-      floatingActionButton: FloatingActionButton(
-        elevation: 10,
-        child: Icon(Icons.add),
-        onPressed: (){Mysnakbar("Action Button Is On",context);},
-      ),
-      bottomNavigationBar: BottomNavigationBar(
-
-        currentIndex: 0,
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.contact_mail),label: "Contact"),
-          BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile"),
-        ],
-        onTap: (int index){
-          if(index==0){
-            Mysnakbar("This is Home",context);
-          }
-          if(index==1){
-            Mysnakbar("This is Contact",context);
-          }
-          if(index==2){
-            Mysnakbar("This is Profile",context);
-          }
-        },
-      ),
-
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            DrawerHeader(
-              padding: EdgeInsets.all(0),
-              child: UserAccountsDrawerHeader(
-
-                decoration: BoxDecoration(color: Colors.teal),
-                accountName: Text("RaFiuL RaZu"),
-                accountEmail: Text("rafiul102621@gmail.com"),
-                currentAccountPicture: Image.network("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTc5Wy-m29S0enI_cA5-e3qwsa7nim26luJAQ&s"),
-              ),
-            ),
-
-            ListTile(title: Text("My Profile"),leading: Icon(Icons.person),),
-            ListTile(title: Text("Claim Premium"),leading: Icon(Icons.person),),
-            ListTile(title: Text("History"),leading: Icon(Icons.person),),
-            ListTile(title: Text("My Visiting Card"),leading: Icon(Icons.card_travel),),
-            ListTile(title: Text("Jobs"),leading: Icon(Icons.contacts_sharp),),
-            ListTile(title: Text("Share"),leading: Icon(Icons.share),),
-            ListTile(title: Text("Feedback"),leading: Icon(Icons.person),),
-            ListTile(title: Text("Rate Us"),leading: Icon(Icons.star),),
-            ListTile(title: Text("Facebook Page"),leading: Icon(Icons.person),),
-            ListTile(title: Text("About US"),leading: Icon(Icons.person),),
-          ],
-        ),
-      ),
-      //
-      body: Row(
+      body:Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          TextButton(onPressed: (){Mysnakbar("This is Text Button", context);}, child: Text("Text Button")),
-          ElevatedButton(onPressed: (){Mysnakbar("This is Elevated Button", context);}, child: Text("Text Button"),style: buttonStyle,),
-          OutlinedButton(onPressed: (){Mysnakbar("This is Outline Button", context);}, child: Text("Text Button")),
+          TextButton(onPressed:(){Mysnakbar("This is Button",context);}, child: Text("Text Button")),
+          ElevatedButton(onPressed:(){Mysnakbar("This is Button",context);}, child: Text("Elevated Button"),style: buttonStyle,),
+          OutlinedButton(onPressed:(){Mysnakbar("This is Button",context);}, child: Text("OutLine Button")),
 
         ],
-      ),
-      //
+      )
     );
   }
+
 
 }
