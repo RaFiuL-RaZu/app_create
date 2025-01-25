@@ -79,6 +79,8 @@ class HomeActivity extends StatelessWidget{
             ListTile(title: Text("Home"),leading: Icon(Icons.home),),
             ListTile(title: Text("Profile"),leading: Icon(Icons.person),),
             ListTile(title: Text("Calls"),leading: Icon(Icons.call),),
+            ListTile(title: Text("Message"),leading: Icon(Icons.message),),
+            ListTile(title: Text("About Us"),leading: Icon(Icons.people),),
           ],
         ),
       ),
