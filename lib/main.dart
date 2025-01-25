@@ -34,6 +34,13 @@ class HomeActivity extends StatelessWidget{
       appBar: AppBar(
         centerTitle: true,
         title: Text("Inovation New App"),
+
+      ),
+      floatingActionButton: FloatingActionButton(
+        elevation: 10,
+        child: Icon(Icons.add),
+        onPressed: (){},
+
       ),
     );
   }
