@@ -15,6 +15,8 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
 
     return MaterialApp(
+      theme: ThemeData(primarySwatch: Colors.teal),
+      
       home: HomeActivity(),
     );
   }
@@ -28,7 +30,9 @@ class HomeActivity extends StatelessWidget{
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("Inovation New App"),
+      ),
     );
   }
 
