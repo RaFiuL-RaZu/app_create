@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget{
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.teal),
       darkTheme: ThemeData(primarySwatch: Colors.amber),
+      debugShowCheckedModeBanner: false,
       home: HomeActivity(),
     );
   }
@@ -31,6 +32,7 @@ class HomeActivity extends StatelessWidget{
 
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         title: Text("Inovation New App"),
       ),
     );
