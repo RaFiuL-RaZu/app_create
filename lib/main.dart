@@ -27,6 +27,12 @@ class MyApp extends StatelessWidget{
 class HomeActivity extends StatelessWidget{
   const HomeActivity({Key? key}) : super(key: key);
 
+  Mysnakbar(message,context){
+    ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(content: Text(message))
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
 
@@ -54,6 +60,17 @@ class HomeActivity extends StatelessWidget{
           BottomNavigationBarItem(icon:Icon(Icons.contacts),label: "Contact"),
           BottomNavigationBarItem(icon:Icon(Icons.person),label: "Profile"),
         ],
+        onTap: (int index){
+          if(index==0) {
+            Mysnakbar("Home Button", context);
+          }
+          if(index==1){
+            Mysnakbar("Contact Button",context);
+          }
+          if(index==2){
+            Mysnakbar("Profile Button",context);
+          }
+        },
       ),
     );
   }
