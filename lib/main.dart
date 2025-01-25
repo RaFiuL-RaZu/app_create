@@ -47,6 +47,14 @@ class HomeActivity extends StatelessWidget{
         onPressed: (){},
 
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        items: [
+         BottomNavigationBarItem(icon:Icon(Icons.home),label: "HOme"),
+          BottomNavigationBarItem(icon:Icon(Icons.home),label: "Contact"),
+          BottomNavigationBarItem(icon:Icon(Icons.home),label: "Profile"),
+        ],
+      ),
     );
   }
 
