@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget{
 
     return MaterialApp(
       theme: ThemeData(primarySwatch: Colors.teal),
-      
+      darkTheme: ThemeData(primarySwatch: Colors.amber),
       home: HomeActivity(),
     );
   }
