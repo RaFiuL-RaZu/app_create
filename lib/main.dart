@@ -76,9 +76,9 @@ class HomeActivity extends StatelessWidget{
         child: ListView(
           children: [
             DrawerHeader(child: Text("RaFiuL Razu")),
-            ListTile(title: Text("Home")),
-            ListTile(title: Text("Home")),
-            ListTile(title: Text("Home")),
+            ListTile(title: Text("Home"),leading: Icon(Icons.home),),
+            ListTile(title: Text("Profile"),leading: Icon(Icons.person),),
+            ListTile(title: Text("Calls"),leading: Icon(Icons.call),),
           ],
         ),
       ),
