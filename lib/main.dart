@@ -72,6 +72,16 @@ class HomeActivity extends StatelessWidget{
           }
         },
       ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            DrawerHeader(child: Text("RaFiuL Razu")),
+            ListTile(title: Text("Home")),
+            ListTile(title: Text("Home")),
+            ListTile(title: Text("Home")),
+          ],
+        ),
+      ),
     );
   }
 
