@@ -14,7 +14,9 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-    return MaterialApp();
+    return MaterialApp(
+      home: HomeActivity(),
+    );
   }
 
 }
@@ -25,7 +27,9 @@ class HomeActivity extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-    return Scaffold();
+    return Scaffold(
+      appBar: AppBar(),
+    );
   }
 
 
