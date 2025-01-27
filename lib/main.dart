@@ -38,7 +38,8 @@ class HomeActivity extends StatelessWidget{
 
     ButtonStyle buttonStyle=ElevatedButton.styleFrom(
       minimumSize: Size(double.infinity, 60),
-      primary: Colors.teal
+      primary: Colors.teal,
+      onPrimary: Colors.white,
     );
 
     return Scaffold(
