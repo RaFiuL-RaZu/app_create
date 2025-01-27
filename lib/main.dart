@@ -36,6 +36,10 @@ class HomeActivity extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
+    ButtonStyle buttonStyle=ElevatedButton.styleFrom(
+      minimumSize: Size(double.infinity, 60)
+    );
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -75,13 +79,25 @@ class HomeActivity extends StatelessWidget{
       drawer: Drawer(
         child: ListView(
           children: [
-            DrawerHeader(child: Text("RaFiuL Razu")),
+            DrawerHeader(child: Text("RaFiul Razu"),),
             ListTile(title: Text("Home"),leading: Icon(Icons.home),),
             ListTile(title: Text("Profile"),leading: Icon(Icons.person),),
             ListTile(title: Text("Calls"),leading: Icon(Icons.call),),
             ListTile(title: Text("Message"),leading: Icon(Icons.message),),
           ],
         ),
+      ),
+
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: "First Name"),),),
+          Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: "Last Name"),),),
+          Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: "Email Address"),),),
+          Padding(padding: EdgeInsets.all(10),child: ElevatedButton(onPressed: (){},child: Text("Submit Button"),style: buttonStyle,)),
+
+
+        ],
       ),
     );
   }
