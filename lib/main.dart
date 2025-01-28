@@ -56,6 +56,9 @@ class Activity1 extends StatelessWidget{
       appBar: AppBar(
         title: Text("Profile"),
       ),
+      body:Center(
+        child: Text("This is Profile"),
+      ),
     );
   }
 
@@ -68,6 +71,9 @@ class Activity2 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Contact"),
+      ),
+      body:Center(
+        child: Text("This is Contact"),
       ),
     );
   }
