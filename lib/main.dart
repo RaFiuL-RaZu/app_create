@@ -1,6 +1,4 @@
 
-
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -30,45 +28,28 @@ class HomeActivity extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-
     return DefaultTabController(
         length:8,
-        child: Scaffold(
+        child:Scaffold(
           appBar: AppBar(
-           title: Text("WhatsApp"),
+            title: Text("WhatsApp"),
             bottom: TabBar(
               isScrollable: true,
               tabs: [
                 Tab(icon: Icon(Icons.home),text: "Home",),
+                Tab(icon: Icon(Icons.person),text: "Profile",),
                 Tab(icon: Icon(Icons.contacts),text: "Contact",),
-                Tab(icon: Icon(Icons.mail),text: "Mail",),
-                Tab(icon: Icon(Icons.call),text: "Calls",),
-                Tab(icon: Icon(Icons.person),text: "Person",),
+                Tab(icon: Icon(Icons.email),text: "Email",),
                 Tab(icon: Icon(Icons.message),text: "Message",),
-                Tab(icon: Icon(Icons.people),text: "People",),
-                Tab(icon: Icon(Icons.phone),text: "Phone",),
-
+                Tab(icon: Icon(Icons.call),text: "Calls",),
+                Tab(icon: Icon(Icons.search),text: "Search",),
+                Tab(icon: Icon(Icons.people),text: "People",)
               ],
             ),
-
-          ),
-          body: TabBarView(
-            children: [
-              Text("1"),
-              Text("2"),
-              Text("3"),
-              Text("4"),
-              Text("5"),
-              Text("6"),
-              Text("7"),
-              Text("8"),
-
-
-            ],
           ),
         )
+
     );
   }
-
 
 }
