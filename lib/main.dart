@@ -32,10 +32,10 @@ class HomeActivity extends StatelessWidget{
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Padding(padding: EdgeInsets.all(20),child: ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity1()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity1("This is From Home To Profile")));
           }, child:Text("Go Profile")),),
           Padding(padding: EdgeInsets.all(20),child: ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity2()));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity2("This is From Home To Profile")));
           }, child:Text("Go Contact")),)
 
         ],
@@ -48,17 +48,23 @@ class HomeActivity extends StatelessWidget{
 
 class Activity1 extends StatelessWidget{
 
+  String msg;
+  Activity1(
+      this.msg,
+      {Key? key}) : super(key: key);
+
+
 
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Profile"),
+        title: Text(msg),
       ),
       body:Center(
         child: ElevatedButton(onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity2()));
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity2("This is from 1 to 2")));
         },child: Text("Go Contact"),),
 
       ),
@@ -69,11 +75,17 @@ class Activity1 extends StatelessWidget{
 
 class Activity2 extends StatelessWidget {
 
+  String msg;
+  Activity2(
+      this.msg,
+      {Key? key}) : super(key: key);
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Contact"),
+        title: Text(msg),
       ),
       body:Center(
         child: Text("This is Contact"),
