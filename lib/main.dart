@@ -57,7 +57,9 @@ class Activity1 extends StatelessWidget{
         title: Text("Profile"),
       ),
       body:Center(
-        child: Text("This is Profile"),
+        child: ElevatedButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity2()));
+        },child: Text("Go Contact"),),
 
       ),
     );
