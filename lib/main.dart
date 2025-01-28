@@ -33,7 +33,12 @@ class HomeActivity extends StatelessWidget{
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          ElevatedButton(onPressed:(){}, child: Text("Go Profile")),
+          Padding(padding:EdgeInsets.all(10),child: ElevatedButton(onPressed:(){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity1()));
+          }, child: Text("Go Profile")),),
+          Padding(padding:EdgeInsets.all(10),child: ElevatedButton(onPressed:(){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity2()));
+          }, child: Text("Go Contact")),),
         ],
       ),
     );
