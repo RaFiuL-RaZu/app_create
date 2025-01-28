@@ -27,20 +27,20 @@ class HomeActivity extends StatelessWidget{
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: AppBar(
-        title: Text("Home"),
-      ),
+      
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Padding(padding:EdgeInsets.all(10),child: ElevatedButton(onPressed:(){
+          Padding(padding: EdgeInsets.all(20),child: ElevatedButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity1()));
-          }, child: Text("Go Profile")),),
-          Padding(padding:EdgeInsets.all(10),child: ElevatedButton(onPressed:(){
+          }, child:Text("Go Profile")),),
+          Padding(padding: EdgeInsets.all(20),child: ElevatedButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity2()));
-          }, child: Text("Go Contact")),),
+          }, child:Text("Go Contact")),)
+
         ],
       ),
+      
     );
   }
 
@@ -58,6 +58,7 @@ class Activity1 extends StatelessWidget{
       ),
       body:Center(
         child: Text("This is Profile"),
+
       ),
     );
   }
