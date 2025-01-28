@@ -37,41 +37,15 @@ class HomeActivity extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
 
-    return DefaultTabController(
-        length:8,
-        child:Scaffold(
-          appBar: AppBar(
-            title: Text("WhatsApp"),
-            bottom: TabBar(
-              isScrollable: true,
-              tabs: [
-                Tab(text: "Home",),
-                Tab(text: "Profile",),
-                Tab(text: "Contact",),
-                Tab(text: "Email",),
-                Tab(text: "Message",),
-                Tab(text: "Calls",),
-                Tab(text: "Search",),
-                Tab(text: "People",)
-              ],
-            ),
-          ),
-          body: TabBarView(
-            children: [
-              HomeFrag(),
-              ProfileFrag(),
-              ContactFrag(),
-              EmailFrag(),
-              MessageFrag(),
-              CallFrag(),
-              SearchFrag(),
-              PeopleFrag()
-
-            ],
-          ),
-        )
-
+    return Scaffold(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Padding(padding: EdgeInsets.all(20),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: "First Name"),),)
+        ],
+      ),
     );
   }
 
 }
+
