@@ -2,15 +2,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'Fragment/CallFrag.dart';
-import 'Fragment/ContactFrag.dart';
-import 'Fragment/EmailFrag.dart';
-import 'Fragment/HomeFrag.dart';
-import 'Fragment/MessageFrag.dart';
-import 'Fragment/PeopleFrag.dart';
-import 'Fragment/ProfileFrag.dart';
-import 'Fragment/SearchFrag.dart';
-
 main(){
   runApp(const MyApp());
 }
@@ -31,47 +22,48 @@ class MyApp extends StatelessWidget{
 }
 
 class HomeActivity extends StatelessWidget{
-  const HomeActivity({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Home"),
+      ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          ElevatedButton(onPressed:(){}, child: Text("Go Profile")),
+        ],
+      ),
+    );
+  }
+
+}
+
+class Activity1 extends StatelessWidget{
 
 
   @override
   Widget build(BuildContext context) {
 
-    return DefaultTabController(
-        length:8,
-        child:Scaffold(
-          appBar: AppBar(
-            title: Text("WhatsApp"),
-            bottom: TabBar(
-              isScrollable: true,
-              tabs: [
-                Tab(icon: Icon(Icons.home),text: "Home",),
-                Tab(icon: Icon(Icons.person),text: "Profile",),
-                Tab(icon: Icon(Icons.contacts),text: "Contact",),
-                Tab(icon: Icon(Icons.email),text: "Email",),
-                Tab(icon: Icon(Icons.message),text: "Message",),
-                Tab(icon: Icon(Icons.call),text: "Calls",),
-                Tab(icon: Icon(Icons.search),text: "Search",),
-                Tab(icon: Icon(Icons.people),text: "People",)
-              ],
-            ),
-          ),
-          body: TabBarView(
-            children: [
-              HomeFrag(),
-              ProfileFrag(),
-              ContactFrag(),
-              EmailFrag(),
-              MessageFrag(),
-              CallFrag(),
-              SearchFrag(),
-              PeopleFrag()
-
-            ],
-          ),
-        )
-
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Profile"),
+      ),
     );
   }
 
+}
+
+class Activity2 extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Contact"),
+      ),
+    );
+  }
 }
