@@ -31,8 +31,10 @@ class MyApp extends StatelessWidget{
 }
 
 class HomeActivity extends StatelessWidget{
-  const HomeActivity({Key? key}) : super(key: key);
-
+  HomeActivity({Key? key}) : super(key: key);
+ ButtonStyle buttonStyle=ElevatedButton.styleFrom(
+   minimumSize: Size(double.infinity, 60)
+ );
 
   @override
   Widget build(BuildContext context) {
@@ -44,12 +46,29 @@ class HomeActivity extends StatelessWidget{
           Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: "First Name"),),),
           Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: "Last Name"),),),
           Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: "Email Address"),),),
-          Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: "Password Name"),),)
+          Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: "Password Name"),),),
+          Padding(padding: EdgeInsets.all(10),child: ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Profile()));
+          },child: Text("SUBMIT THIS"),style: buttonStyle),),
 
         ],
       ),
     );
   }
 
+}
+
+class Profile extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("This Is Profile"),
+      ),
+    );
+  }
+  
+  
 }
 
