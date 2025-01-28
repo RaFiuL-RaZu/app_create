@@ -35,7 +35,7 @@ class HomeActivity extends StatelessWidget{
             Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity1("This is From Home To Profile")));
           }, child:Text("Go Profile")),),
           Padding(padding: EdgeInsets.all(20),child: ElevatedButton(onPressed: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity2("This is From Home To Profile")));
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity2("This is From Home To Contact")));
           }, child:Text("Go Contact")),)
 
         ],
@@ -64,7 +64,7 @@ class Activity1 extends StatelessWidget{
       ),
       body:Center(
         child: ElevatedButton(onPressed: (){
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity2("This is from 1 to 2")));
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity2("This Is From Profile To Contact")));
         },child: Text("Go Contact"),),
 
       ),
