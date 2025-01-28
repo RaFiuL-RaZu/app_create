@@ -2,6 +2,15 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'Fragment/CallFrag.dart';
+import 'Fragment/ContactFrag.dart';
+import 'Fragment/EmailFrag.dart';
+import 'Fragment/HomeFrag.dart';
+import 'Fragment/MessageFrag.dart';
+import 'Fragment/PeopleFrag.dart';
+import 'Fragment/ProfileFrag.dart';
+import 'Fragment/SearchFrag.dart';
+
 main(){
   runApp(const MyApp());
 }
@@ -46,6 +55,19 @@ class HomeActivity extends StatelessWidget{
                 Tab(icon: Icon(Icons.people),text: "People",)
               ],
             ),
+          ),
+          body: TabBarView(
+            children: [
+              HomeFrag(),
+              ProfileFrag(),
+              ContactFrag(),
+              EmailFrag(),
+              MessageFrag(),
+              CallFrag(),
+              SearchFrag(),
+              PeopleFrag()
+
+            ],
           ),
         )
 
