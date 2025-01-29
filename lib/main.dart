@@ -46,7 +46,7 @@ class HomeActivity extends StatelessWidget{
           Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: "First Name"),),),
           Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: "Last Name"),),),
           Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: "Email Address"),),),
-          Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: "Password Name"),),),
+          Padding(padding: EdgeInsets.all(10),child: TextField(decoration: InputDecoration(border: OutlineInputBorder(),labelText: "Password "),),),
           Padding(padding: EdgeInsets.all(10),child: ElevatedButton(onPressed: (){
             Navigator.push(context, MaterialPageRoute(builder: (context)=>Profile()));
           },child: Text("SUBMIT THIS"),style: buttonStyle),),
@@ -64,8 +64,21 @@ class Profile extends StatelessWidget{
     
     return Scaffold(
       appBar: AppBar(
-        title: Text("This Is Profile"),
+        title: Text("WhatsApp"),
+        actions: [
+          Padding(padding: EdgeInsets.all(10),child: Icon(Icons.camera_enhance),),
+          Padding(padding: EdgeInsets.all(10),child: Icon(Icons.search),),
+          Padding(padding: EdgeInsets.all(10),child: Icon(Icons.more_vert),),
+        ],
       ),
+      body: Center(
+        child:Column(
+          children: [
+            Text("Hello World"),
+          ],
+        ),
+      ),
+
     );
   }
   
