@@ -26,32 +26,18 @@ main() {
         actions: [Icon(Icons.notifications), SizedBox(width: 10)],
       ),
       body: Center(
-        child: Row(
-          children: [
-            Container(
-              height: 100,
-              width: 100,
-              color:Colors.red,
-            ),
-            Container(
-              height: 100,
-              width: 100,
-              color:Colors.green,
-            ),
-            Card(
-              color: Colors.blue,
-              child: SizedBox(
-                height: 100,
-                width: 100,
-              ),
-            ),
-            Container(
-              height: 100,
-              width: 100,
-              color:Colors.red,
-            )
-          ],
+        child: Container(
+          height: 200,
+          width: 200,
+          decoration: BoxDecoration(
+            gradient:LinearGradient(colors:[
+              Colors.red,
+              Colors.green,
+              Colors.orangeAccent,
+            ]),
+          ),
         ),
+
       )
     ),
   ));
