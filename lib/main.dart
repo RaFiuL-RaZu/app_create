@@ -25,12 +25,31 @@ main() {
         ),
         actions: [Icon(Icons.notifications), SizedBox(width: 10)],
       ),
-      body: Container(
-        child: SizedBox(
-          height: 100,
-          width: 100,
+      body: Center(
+        child: Row(
+          children: [
+            Container(
+              height: 100,
+              width: 100,
+              color:Colors.red,
+            ),
+            Container(
+              height: 100,
+              width: 100,
+              color:Colors.green,
+            ),
+            SizedBox(
+              height: 100,
+              width: 100,
+            ),
+            Container(
+              height: 100,
+              width: 100,
+              color:Colors.red,
+            )
+          ],
         ),
-      ),
+      )
     ),
   ));
 }
