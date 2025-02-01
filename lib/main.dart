@@ -27,7 +27,7 @@ main() {
       body:Center(
         child: Center(
           child: Container(
-            padding: EdgeInsets.symmetric(horizontal: 20,vertical: 20),
+            padding: EdgeInsets.only(left: 10,right: 15,top: 20,bottom: 10),
             color: Colors.green,
             child: Container(
               height: 200,
