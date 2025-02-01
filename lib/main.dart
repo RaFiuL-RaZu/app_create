@@ -38,9 +38,12 @@ main() {
               width: 100,
               color:Colors.green,
             ),
-            SizedBox(
-              height: 100,
-              width: 100,
+            Card(
+              color: Colors.blue,
+              child: SizedBox(
+                height: 100,
+                width: 100,
+              ),
             ),
             Container(
               height: 100,
