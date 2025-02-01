@@ -25,21 +25,11 @@ main() {
         ),
         actions: [Icon(Icons.notifications), SizedBox(width: 10)],
       ),
-      body:Center(
-        child: Center(
-          child: Container(
-            height: 200,
-            width: 200,
-            padding: EdgeInsets.only(left: 10,right: 15,top: 20,bottom: 10),
-            decoration: BoxDecoration(
-              color: Colors.green,
-              border: Border.all(color:Colors.red,width: 5),
-              borderRadius: BorderRadius.only(topLeft: Radius.circular(30)),
-
-            ),
-
-          ),
-        )
+      body: Container(
+        child: SizedBox(
+          height: 100,
+          width: 100,
+        ),
       ),
     ),
   ));
