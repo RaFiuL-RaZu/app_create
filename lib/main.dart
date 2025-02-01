@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:flutter/services.dart';
 
 main() {
   runApp(MaterialApp(
@@ -27,13 +28,14 @@ main() {
       body:Center(
         child: Center(
           child: Container(
+            height: 200,
+            width: 200,
             padding: EdgeInsets.only(left: 10,right: 15,top: 20,bottom: 10),
-            color: Colors.green,
-            child: Container(
-              height: 200,
-              width: 200,
-              color: Colors.amber,
+            decoration: BoxDecoration(
+              color: Colors.green,
+              shape: BoxShape.circle
             ),
+
           ),
         )
       ),
