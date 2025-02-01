@@ -25,11 +25,15 @@ main() {
         actions: [Icon(Icons.notifications), SizedBox(width: 10)],
       ),
       body:Center(
-        child: Container(
-          height: 200,width: 200,
-          color: Colors.amber,
-          child:Icon(Icons.person,size: 50,color: Colors.white,)
-        ),
+        child: Center(
+          child: Container(
+            child: Container(
+              height: 200,
+              width: 200,
+              color: Colors.amber,
+            ),
+          ),
+        )
       ),
     ),
   ));
