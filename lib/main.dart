@@ -34,7 +34,7 @@ main() {
             decoration: BoxDecoration(
               color: Colors.green,
               border: Border.all(color:Colors.red,width: 5),
-              borderRadius: BorderRadius.circular(100),
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(30)),
 
             ),
 
