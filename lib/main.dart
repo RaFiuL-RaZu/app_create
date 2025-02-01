@@ -33,8 +33,8 @@ main() {
             padding: EdgeInsets.only(left: 10,right: 15,top: 20,bottom: 10),
             decoration: BoxDecoration(
               color: Colors.green,
-              border: Border.all(color:Colors.red),
-              borderRadius: BorderRadius.circular(20),
+              border: Border.all(color:Colors.red,width: 5),
+              borderRadius: BorderRadius.circular(100),
 
             ),
 
