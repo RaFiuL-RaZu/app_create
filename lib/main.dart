@@ -11,11 +11,11 @@ main() {
         foregroundColor: Colors.black,
         centerTitle: true,
         backgroundColor: Colors.white,
-        leading: const Icon(
+        leading: Icon(
           Icons.arrow_back,
           color: Colors.black,
         ),
-        title: const Text(
+        title: Text(
           "Flutter",
           style: TextStyle(
             fontWeight: FontWeight.bold,
@@ -33,8 +33,9 @@ main() {
             padding: EdgeInsets.only(left: 10,right: 15,top: 20,bottom: 10),
             decoration: BoxDecoration(
               color: Colors.green,
-              border: Border.all(color: Colors.red),
-              shape: BoxShape.circle
+              border: Border.all(color:Colors.red),
+              borderRadius: BorderRadius.circular(20),
+
             ),
 
           ),
