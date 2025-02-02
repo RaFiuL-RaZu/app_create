@@ -31,7 +31,7 @@ main() {
           width: 200,
           decoration: BoxDecoration(
             gradient:LinearGradient(colors:[
-              Colors.red,
+              Colors.blue,
               Colors.green,
               Colors.orangeAccent,
             ]),
