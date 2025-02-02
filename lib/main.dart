@@ -27,7 +27,7 @@ main() {
       ),
       body: Center(
         child: Container(
-          height: 200,
+          height: 300,
           width: 200,
           decoration: BoxDecoration(
             gradient:LinearGradient(colors:[
