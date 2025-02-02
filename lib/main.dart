@@ -32,6 +32,7 @@ class HomeActivity extends StatelessWidget{
           BottomNavigationBarItem(icon: Icon(Icons.chat),label: "Chat"),
           BottomNavigationBarItem(icon: Icon(Icons.people),label: "Profile"),
         ],
+
       ),
     );
   }
