@@ -24,7 +24,16 @@ class HomeActivity extends StatelessWidget{
   Widget build(BuildContext context) {
 
 
-    return Scaffold();
+    return Scaffold(
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: 0,
+        items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
+          BottomNavigationBarItem(icon: Icon(Icons.chat),label: "Chat"),
+          BottomNavigationBarItem(icon: Icon(Icons.people),label: "Profile"),
+        ],
+      ),
+    );
   }
 
 
